@@ -1,0 +1,11 @@
+.main_container {
+  //   background-color: red;
+  //   height: 100vh;
+  //   width: 100%;
+}
+.button_container {
+  @apply min-h-screen flex justify-center items-center;
+}
+.button {
+  @apply p-4 rounded-md pl-6 pr-6 font-semibold bg-teal-300;
+}
