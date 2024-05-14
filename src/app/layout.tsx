@@ -1,3 +1,6 @@
+import "./index.scss";
+import "./pages/reset.css";
+
 export default function RootLayout({
   children,
 }: {
