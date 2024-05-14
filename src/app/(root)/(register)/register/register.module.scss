@@ -1,0 +1,43 @@
+.register {
+  @apply h-screen w-full flex items-center justify-center;
+  .form_container {
+    @apply bg-slate-50 p-10;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
+    width: min(90vw, 800px);
+
+    .form {
+      @apply flex flex-col mt-10;
+
+      input {
+        margin-top: 20px;
+      }
+
+      .team_members {
+        @apply flex gap-2 flex-wrap mt-5;
+        .team_member {
+          @apply bg-slate-100 px-5 py-2 rounded-full text-sm text-slate-600 block;
+        }
+        .clear_all {
+          @apply bg-red-50 text-red-700 cursor-pointer;
+        }
+      }
+
+      button {
+        @apply border-none outline-none px-3 py-5 cursor-pointer mt-10;
+      }
+    }
+  }
+
+  input {
+    @apply outline-none bg-[transparent] border-none text-slate-100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    &::placeholder {
+      @apply text-slate-300;
+    }
+  }
+}
