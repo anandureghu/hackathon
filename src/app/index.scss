@@ -1,5 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+// font-family: "Jersey 10", sans-serif;
 @import "../styles/styles.scss";
 
 body {
   background-color: #1d1d1d;
+}
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.support_label {
+  @apply text-xs text-slate-400 mt-2;
 }
