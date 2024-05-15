@@ -1,6 +1,7 @@
 import { connectToDB } from "@/database/mongodb";
 import Team from "@/models/team";
 import TeamMembers from "@/models/teamMembers";
+import { NextResponse } from "next/server";
 
 export const POST = async (req: Request) => {
   const { teamName, teamMembers, userId } = await req.json();
@@ -19,9 +20,9 @@ export const POST = async (req: Request) => {
       data: newTeam,
       message: "Successfully created new team",
     };
-    return new Response(JSON.stringify(responseBody), { status: 201 });
+    return NextResponse.json(responseBody, { status: 201 });
   } catch (err) {
     const errorBody = { message: "Failed to create new team", err: err };
-    return new Response(JSON.stringify(errorBody), { status: 500 });
+    return NextResponse.json(errorBody, { status: 500 });
   }
 };
