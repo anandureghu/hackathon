@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import "./index.scss";
-import "./pages/reset.css";
+// import "./pages/reset.css";
 
 export default function RootLayout({
   children,

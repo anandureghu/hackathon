@@ -1,0 +1,18 @@
+.main_container {
+  @apply flex flex-col gap-4 justify-center h-[100vh] pl-10 w-[800px] items-start;
+  .heading {
+    @apply text-8xl;
+  }
+  .description {
+    @apply text-slate-300 text-xl;
+  }
+  .date {
+    @apply text-2xl font-semibold;
+  }
+  .button_container {
+    @apply mt-10;
+    .button {
+      @apply p-4 rounded-md pl-6 pr-6 font-semibold bg-teal-300 cursor-pointer text-lg;
+    }
+  }
+}

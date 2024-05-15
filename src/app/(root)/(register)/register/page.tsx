@@ -1,20 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./register.module.scss";
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import axios from "axios";
+import { toast } from "sonner";
 import "react-tagsinput/react-tagsinput.css";
 import { REGEX } from "@/main/consts";
-import { toast } from "sonner";
-import axios from "axios";
+import useAuth from "@/hooks/useAuth";
+import styles from "./register.module.scss";
 
 const RegisterPage = () => {
   const [teamMembers, setTeamMembers] = useState<string[]>([]);
   const [teamName, setTeamName] = useState<string>("");
+  const { user } = useAuth();
   const handleSubmit = () => {
     const body = {
       teamName,
       teamMembers,
-      userId: "1",
+      userId: user?.id,
     };
     console.log(body);
     axios.post("/api/register", body).then(({ data }) => {
