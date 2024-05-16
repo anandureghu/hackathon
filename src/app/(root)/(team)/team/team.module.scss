@@ -1,13 +1,16 @@
 .team_container {
   @apply p-10;
+  .heading {
+    @apply text-3xl;
+  }
   .description {
     @apply text-slate-300 text-[14px];
   }
   .card_container {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap min-w-[700px];
   }
   .card {
-    @apply w-[50%] flex p-2 min-w-[700px];
+    @apply flex p-2 min-w-[700px];
   }
 
   .profile_card {
@@ -49,6 +52,18 @@
     }
     .email {
       @apply text-slate-300;
+    }
+  }
+
+  @media (max-width: 865px) {
+    .heading {
+      @apply text-center;
+    }
+    .description {
+      @apply text-center;
+    }
+    .card_container {
+      @apply flex justify-center items-center;
     }
   }
 }

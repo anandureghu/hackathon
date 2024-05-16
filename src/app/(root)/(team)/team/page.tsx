@@ -39,7 +39,7 @@ export default function Team() {
 
   return (
     <div className={styles.team_container}>
-      <h1>Team Name</h1>
+      <h1 className={styles.heading}>Team Name</h1>
       <span className={styles.description}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cumque
         aliquid, amet alias natus porro accusantium quia eius deserunt cum

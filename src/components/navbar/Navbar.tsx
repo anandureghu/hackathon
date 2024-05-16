@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.main} onClick={() => router.push("/")}>
-        Hackathon
+        DevFlow
       </div>
       <div className={styles.items_container}>
         <ul className={styles.items}>

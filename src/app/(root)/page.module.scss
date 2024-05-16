@@ -1,5 +1,5 @@
 .main_container {
-  @apply flex flex-col gap-4 justify-center h-[100vh] pl-10 w-[800px] items-start;
+  @apply flex flex-col gap-4 justify-center h-[100vh] pl-10 pr-10 max-w-[800px];
   .heading {
     @apply text-8xl;
   }
@@ -9,10 +9,65 @@
   .date {
     @apply text-2xl font-semibold;
   }
+  .counter_container {
+    @apply flex flex-row gap-2;
+    .counter {
+      @apply flex flex-col items-center;
+    }
+    .counter_value {
+      @apply text-2xl font-extrabold;
+    }
+    .counter_text {
+      @apply text-slate-400;
+    }
+  }
+  .text {
+    @apply flex gap-6;
+  }
   .button_container {
-    @apply mt-10;
+    @apply mt-8;
     .button {
       @apply p-4 rounded-md pl-6 pr-6 font-semibold bg-teal-300 cursor-pointer text-lg;
+    }
+  }
+  @media (max-width: 768px) {
+    .heading {
+      @apply text-6xl text-center;
+    }
+    .description {
+      @apply text-lg text-center;
+    }
+    .date {
+      @apply text-xl text-center;
+    }
+    .counter_container {
+      @apply flex justify-center items-center;
+    }
+    .button {
+      @apply text-sm p-2 pl-4 pr-4;
+    }
+  }
+  @media (max-width: 865px) {
+    .heading {
+      @apply text-7xl text-center;
+    }
+    .description {
+      @apply text-lg text-center;
+    }
+    .date {
+      @apply text-xl text-center;
+    }
+    .counter_container {
+      @apply flex justify-center items-center;
+    }
+    .counter_value {
+      @apply text-xl;
+    }
+    .button_container {
+      @apply text-center;
+      .button {
+        @apply text-sm p-3 pl-5 pr-5;
+      }
     }
   }
 }
